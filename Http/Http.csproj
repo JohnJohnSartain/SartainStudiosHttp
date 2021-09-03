@@ -3,6 +3,19 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
+    <Version>1.0.0</Version>
+    <PackageId>SartainStudios.Http</PackageId>
+    <Authors>John Sartain</Authors>
+    <Company>Sartain Studios</Company>
+    <Product>Sartain Studios Http</Product>
+    <Description>Simple http library</Description>
+    <Copyright>Sartain Studios</Copyright>
+    <PackageProjectUrl>https://github.com/jhnsartain3/SartainStudiosHttp</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/jhnsartain3/SartainStudiosHttp</RepositoryUrl>
+    <RepositoryType>Nuget Package</RepositoryType>
+    <PackageTags>Http</PackageTags>
+    <RootNamespace>SartainStudios.Http</RootNamespace>
+    <AssemblyName>SartainStudios.Http</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
