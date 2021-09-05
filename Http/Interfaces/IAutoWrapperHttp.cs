@@ -56,6 +56,14 @@ public interface IAutoWrapperHttp<TEntity> : IHttpBase<TEntity>
         string token = null);
 
     /// <summary>
+    ///     Patch record and return data.
+    /// </summary>
+    Task<AutoWrapperResponseModel<string>> PatchWithResultAsync(
+        string urlExtension,
+        TEntity model,
+        string token = null);
+
+    /// <summary>
     ///     Create record.
     /// </summary>
     Task<bool> PostAsync(

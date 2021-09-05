@@ -51,6 +51,13 @@ public class AutoWrapperHttp<TEntity> : HttpBase<TEntity>, IAutoWrapperHttp<TEnt
         (await base.PutAsync(urlExtension + "/" + id, model, token))
         .Success;
 
+    public async Task<AutoWrapperResponseModel<string>> PatchWithResultAsync(
+       string urlExtension,
+       TEntity model,
+       string token = null) =>
+       (await base.PatchAsync(urlExtension, model, token))
+       .ReadAs<AutoWrapperResponseModel<string>>();
+
     public new async Task<bool> PostAsync(
         string urlExtension,
         TEntity model,

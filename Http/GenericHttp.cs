@@ -50,6 +50,13 @@ public class GenericHttp<TEntity> : HttpBase<TEntity>, IGenericHttp<TEntity>
             (await base.PutAsync(urlExtension + "/" + id, model, token))
                 .Success;
 
+    public async Task<string> PatchWithResultAsync(
+       string urlExtension,
+       TEntity model,
+       string token = null) =>
+           (await base.PatchAsync(urlExtension, model, token))
+               .ReadAs<string>();
+
     public new async Task<bool> PostAsync(
         string urlExtension,
         TEntity model,

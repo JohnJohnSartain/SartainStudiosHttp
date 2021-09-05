@@ -52,6 +52,19 @@ public class HttpBase<TEntity> : IHttpBase<TEntity>
                     ? GetCustomHeaders(token)
                     : null));
 
+    protected async Task<IHttwrapResponse> PatchAsync(
+      string urlExtension,
+      TEntity model,
+      string token = null) =>
+      await HttpBase<TEntity>.CheckExceptions(async () =>
+          await _httwrapClient.PatchAsync(
+              urlExtension,
+              model,
+              null,
+              token != null
+                  ? GetCustomHeaders(token)
+                  : null));
+
     protected async Task<IHttwrapResponse> PostAsync(
         string urlExtension,
         TEntity model,
