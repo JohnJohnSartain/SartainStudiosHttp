@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
-    <Version>2.1.0</Version>
+    <Version>2.1.1</Version>
     <PackageId>SartainStudios.Http</PackageId>
     <Authors>John Sartain</Authors>
     <Company>Sartain Studios</Company>
@@ -19,8 +19,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoWrapper.Core" Version="4.5.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="SartainStudios.SharedModels" Version="1.0.6" />
   </ItemGroup>
 
