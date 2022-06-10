@@ -11,7 +11,7 @@ public interface IHttpClient
     Task<ResponseModel<TEntity>> GetAsync<TEntity>(string requestUri, string token);
     Task<ResponseModel<string>> PutAsync<TEntity>(string requestUri, TEntity entity, string token);
     Task<ResponseModel<string>> PostAsync<TEntity>(string requestUri, TEntity entity, string token);
-    Task<ResponseModel<string>> DeleteAsync<TEntity>(string requestUri, string token);
+    Task<ResponseModel<string>> DeleteAsync(string requestUri, string token);
 
     void SetConnection(string baseUrl, string token);
 }
