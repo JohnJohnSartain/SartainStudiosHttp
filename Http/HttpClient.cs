@@ -50,7 +50,7 @@ public class HttpClient : IHttpClient
         return await (await _httpClient.PostAsJsonAsync(_httpClient.BaseAddress + requestUri, entity)).Content.ReadFromJsonAsync<ResponseModel<string>>();
     }
 
-    public async Task<ResponseModel<string>> DeleteAsync<TEntity>(string requestUri, string token)
+    public async Task<ResponseModel<string>> DeleteAsync(string requestUri, string token)
     {
         SetToken(token);
         return await (await _httpClient.DeleteAsync(_httpClient.BaseAddress + requestUri)).Content.ReadFromJsonAsync<ResponseModel<string>>();
