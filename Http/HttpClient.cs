@@ -6,13 +6,34 @@ using System.Threading.Tasks;
 
 namespace SartainStudios.Http;
 
+/// <summary>
+///     Standard http access operation methods.
+/// </summary>
 public interface IHttpClient
 {
+    /// <summary>
+    ///     Returns all record or record depeding on type passed
+    /// </summary>
     Task<ResponseModel<TEntity>> GetAsync<TEntity>(string requestUri, string token);
+
+    /// <summary>
+    ///     Update record by id
+    /// </summary>
     Task<ResponseModel<string>> PutAsync<TEntity>(string requestUri, TEntity entity, string token);
+
+    /// <summary>
+    ///     Create record with model
+    /// </summary>
     Task<ResponseModel<string>> PostAsync<TEntity>(string requestUri, TEntity entity, string token);
+
+    /// <summary>
+    ///     Delete record by id
+    /// </summary>
     Task<ResponseModel<string>> DeleteAsync(string requestUri, string token);
 
+    /// <summary>
+    ///     Set up base url and token
+    /// </summary>
     void SetConnection(string baseUrl, string token);
 }
 
